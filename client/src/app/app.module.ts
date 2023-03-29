@@ -9,12 +9,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { WebcamModule } from 'ngx-webcam';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CameraService } from './service/camera.service';
+import { DisplayComponent } from './components/display.component';
+import { DisplayService } from './service/display.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CameraComponent,
-    UploadComponent
+    UploadComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { CameraService } from './service/camera.service';
     HttpClientModule,
     WebcamModule
   ],
-  providers: [CameraService],
+  providers: [CameraService, DisplayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -41,7 +41,8 @@ export class UploadComponent implements OnInit {
     console.log(this.blob);
     this.camSvc.upload(formVal, this.blob)
         .then((result)=> {
-          this.router.navigate(['/']);
+          console.log('result from spring-boot:', result);
+          this.router.navigate(['/display']);
         });
   }
 
